@@ -40,7 +40,7 @@ In the case where anonymous access is enabled but directory listing for director
 4. Extracts the actual file name from the .tar signature file
 5. Downloads the INI file from `http://<SCCM DP>/SMS_DP_SMSPKG$/Datalib/<filename>/<extracted filename>.INI`
 6. Extracts the hash from the INI file
-7. Downloads the actual file from `http://<SCCM DP>/SMS_DP_SMSPKG$/<hash[0:4]>/<hash>` renaming it to the correct file name as specified in the signature file.
+7. Downloads the actual file from `http://<SCCM DP>/SMS_DP_SMSPKG$/Filelib/<hash[0:4]>/<hash>` renaming it to the correct file name as specified in the signature file.
 
 The signature files are `.tar` files but are not actual tars. They contain filenames 512 bytes before the byte string `0x18, 0x00, 0x00, 0x00, 0x01, 0x00, 0x01, 0x00, 0x01, 0x00, 0x01` as shown below.
 
