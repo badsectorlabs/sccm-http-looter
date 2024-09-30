@@ -1,4 +1,4 @@
-module sccmlooter
+module sccm-http-looter
 
 go 1.22
 
